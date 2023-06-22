@@ -4,12 +4,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Kirim File</h1>
+            <h1>Disposisi</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
                     <li class="breadcrumb-item">Menu</li>
-                    <li class="breadcrumb-item active">Kirim File</li>
+                    <li class="breadcrumb-item active">Disposisi</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -20,7 +20,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Kirim File</h5>
+                            <h5 class="card-title">Disposisi</h5>
 
                             <!-- General Form Elements -->
                             <form method="POST" action="{{ url('disposisi-kirim') }}" enctype="multipart/form-data">

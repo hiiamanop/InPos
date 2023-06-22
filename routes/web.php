@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArsipController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InposController;
 use App\Http\Controllers\UnggahController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,6 @@ Route::get('/arsip', [ArsipController::class, 'index']);
 
 // routing ke halaman unggah
 Route::get('/unggah', [UnggahController::class, 'index']);
+
+//Routing unggah
+Route::post('/unggah/file',[InposController::class,'storefile']);

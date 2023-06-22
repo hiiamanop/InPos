@@ -23,18 +23,12 @@
                             <h5 class="card-title">Unggah File</h5>
 
                             <!-- General Form Elements -->
-                            <form method="POST" action="{{ url('contact-store') }}" enctype="multipart/form-data">
+                            <form method="POST" action="/unggah/file" enctype="multipart/form-data">
                                 @csrf
-                                {{-- <div class="row mb-3">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Nama File</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" value="" name="nama" class="form-control">
-                                    </div>
-                                </div> --}}
                                 <div class="row mb-3">
                                     <label for="inputText" class="col-sm-2 col-form-label">Lampiran</label>
                                     <div class="col-sm-10">
-                                        <input type="file" value="" name="lampiran" class="form-control">
+                                        <input type="file" value="" name="file_pdf" class="form-control" id="file_pdf">
                                     </div>
                                 </div>
 

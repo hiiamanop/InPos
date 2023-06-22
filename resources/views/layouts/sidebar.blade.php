@@ -30,6 +30,11 @@
               <i class="bi bi-circle"></i><span>Unggah</span>
             </a>
           </li>
+          <li>
+            <a href="{{url('/disposisi')}}">
+              <i class="bi bi-circle"></i><span>Disposisi</span>
+            </a>
+          </li>
           {{-- <li>
             <a href="{{url('/assets')}}">
               <i class="bi bi-circle"></i><span>Assets</span>

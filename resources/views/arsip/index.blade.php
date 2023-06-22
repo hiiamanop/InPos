@@ -34,6 +34,7 @@
                                     <th scope="col">Keterangan</th>
                                     <th scope="col">Pengirim</th>
                                     <th scope="col">Status</th>
+                                    <th scope="col">Tindakan</th>
                                 </tr>
                             </thead>
                             {{-- <tbody> --}}

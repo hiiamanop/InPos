@@ -40,7 +40,103 @@
                                             <option value="8">Bisnis Jasa Keuangan</option>
                                             <option value="9">Penjualan, Korporat, Kurir Logistik</option>
                                             <option value="10">Ritel/Kemitraan</option>
+                                            <option value="11" style="font-weight:bold">Semua</option>
                                         </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Perihal</label>
+                                    <div class="col">
+                                        <input class="form-check-input" type="checkbox" name="Segera tanggapi"
+                                            value="true" id="Segera tanggapi">
+                                        <label class="form-check-label" for="Segera Tanggapi ">Segera tanggapi</label>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input class="form-check-input" type="checkbox" name="Harap dipedomani"
+                                                    value="true" id="Harap dipedomani">
+                                                <label class="form-check-label" for="Harap dipedomani">Harap
+                                                    dipedomani</label>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            name="Monitor Pelaksanaan" value="true"
+                                                            id="Monitor Pelaksanaan">
+                                                        <label class="form-check-label" for="rememberMe">Monitor
+                                                            pelaksanaan</label>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    name="Bicarakan dengan saya" value="true"
+                                                                    id="Bicarakan dengan saya">
+                                                                <label class="form-check-label" for="rememberMe">Bicarakan
+                                                                    dengan saya</label>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            name="konsepkan surat ..." value="true"
+                                                                            id="konsepkan surat ...">
+                                                                        <label class="form-check-label"
+                                                                            for="rememberMe">Konsepkan surat ...<label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input" type="checkbox" name="Proses Lebih Lanjut"
+                                            value="true" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Proses Lebih Lanjut</label>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input class="form-check-input" type="checkbox"
+                                                    name="Koordinasikan dengan ..." value="true"
+                                                    id="Koordinasikan dengan ...">
+                                                <label class="form-check-label" for="rememberMe">Koordinasikan dengan
+                                                    ...</label>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            name="Teruskan ke ..." value="true" id="Teruskan ke ...">
+                                                        <label class="form-check-label" for="rememberMe">Teruskan ke
+                                                            ...</label>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    name="Laporkan ke ..." value="true"
+                                                                    id="Laporkan ke ...">
+                                                                <label class="form-check-label" for="rememberMe">Laporkan
+                                                                    ke ...</label>
+                                                                    <div class="row">
+                                                                        <div class="col">
+                                                                            <input class="form-check-input" type="checkbox"
+                                                                                name="FYI" value="true"
+                                                                                id="FYI">
+                                                                            <label class="form-check-label"
+                                                                                for="rememberMe">FYI<label>
+                                                                        </div>
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input" type="checkbox" name="Buat Analisa/Kajian"
+                                            value="true" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Buat Analisa/Kajian</label>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input class="form-check-input" type="checkbox" name="Buat surat usulsan"
+                                                    value="true" id="Buat surat usulsan">
+                                                <label class="form-check-label" for="rememberMe">Buat surat usulan<label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row mb-3">

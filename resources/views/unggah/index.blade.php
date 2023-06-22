@@ -25,12 +25,12 @@
                             <!-- General Form Elements -->
                             <form method="POST" action="{{ url('contact-store') }}" enctype="multipart/form-data">
                                 @csrf
-                                <div class="row mb-3">
+                                {{-- <div class="row mb-3">
                                     <label for="inputText" class="col-sm-2 col-form-label">Nama File</label>
                                     <div class="col-sm-10">
                                         <input type="text" value="" name="nama" class="form-control">
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="row mb-3">
                                     <label for="inputText" class="col-sm-2 col-form-label">Lampiran</label>
                                     <div class="col-sm-10">

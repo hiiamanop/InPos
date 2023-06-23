@@ -65,6 +65,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
+-- ABOUT INPOS DATABASE --
 CREATE TABLE user (                           # Tabel user digunakan untuk menampung data-data pihak 
                                                 yang terlibat di dalam aplikasi Inpos
     id_pos VARCHAR(20) PRIMARY KEY NOT NULL,  # Atribut id_pos menampung data Nippos tiap pihak,    

@@ -71,7 +71,7 @@
                     <p class="text-center small">Masukan username dan password anda </p>
                   </div>
 
-                  <form class="row g-3" action="/login" method="POST" >
+                  <form class="row g-3" action="/auth" method="POST" >
                     @csrf
                     @method('POST')
                     <div class="col-12">

@@ -25,10 +25,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('auth.login');
 // });
 
-Route::get('/login',[LoginController::class,'index']);
+// Route::get('/login',[LoginController::class,'index']);
 
 // routing login
-Route::post('/login',[AuthController::class,'login']);
+Route::post('/auth',[AuthController::class,'login']);
 
 // routing logout
 // Route::get('/logout', [AuthController::class, 'login'])->name('logout');

@@ -73,7 +73,6 @@
 
                   <form class="row g-3" action="/auth" method="POST" >
                     @csrf
-                    @method('POST')
                     <div class="col-12">
                       <label for="id_pos" class="form-label">Username</label>
                       <div class="input-group has-validation">

@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('auth.login');
 // });
 
-// Route::get('/login',[LoginController::class,'index']);
+Route::get('/',[LoginController::class,'index']);
 
 // routing login
 Route::post('/auth',[AuthController::class,'login']);

@@ -3,11 +3,10 @@
 use App\Http\Controllers\ArsipController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
-<<<<<<< HEAD
 use App\Http\Controllers\DisposisiController;
-=======
+use App\Http\Controllers\ManajerController;
+use App\Http\Controllers\PreviewController;
 use App\Http\Controllers\InposController;
->>>>>>> 85ebd262e8c5b455db866951817ed18af004b75a
 use App\Http\Controllers\UnggahController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,11 +43,15 @@ Route::get('/arsip', [ArsipController::class, 'index']);
 // routing ke halaman unggah
 Route::get('/unggah', [UnggahController::class, 'index']);
 
-<<<<<<< HEAD
 // routing ke halaman disposisi
 Route::get('/disposisi', [DisposisiController::class, 'index']);
 Route::get('/disposisi-kirim', [DisposisiController::class, 'disposisi']);
-=======
+
+//routing ke halaman disposisi-manajer
+Route::get('/disposisi-manajer', [ManajerController::class, 'index']);
+
+//routing ke halaman preview-file
+Route::get('/preview-file', [PreviewController::class, 'index']);
+
 //Routing unggah
 Route::post('/unggah/file',[InposController::class,'storefile']);
->>>>>>> 85ebd262e8c5b455db866951817ed18af004b75a

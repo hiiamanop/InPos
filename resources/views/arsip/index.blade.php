@@ -62,8 +62,8 @@
                                     <td>Manajer SDM</td>
                                     <td>Sudah terbaca</td>
                                     <td>
-                                      {{-- <a href="{{url('contact-edit')}}/{{$dt->id}}" class="btn btn-sm btn-success">Buka</a> --}}
-                                      <a class="btn btn-sm btn-success">Buka</a>
+                                      {{-- <a class="btn btn-sm btn-success">Buka</a> --}}
+                                      <a class="btn btn-sm btn-success" href="{{url('/preview-file')}}">Buka</a>
                                       {{-- <a onclick="return confirm('yakin hapus data?')" href="{{url('contact-delete')}}/{{$dt->id}}" class="btn btn-sm btn-danger">Delete</a> --}}
                                       <a class="btn btn-sm btn-danger">Delete</a>
                                     </td>

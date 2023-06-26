@@ -55,18 +55,24 @@
                                 <tbody>
                                     @foreach ($arsip as $item)
                                         <tr>
-                                            <th scope="row">{{$item->index + 1}}</th>
+                                            <th scope="row">{{$loop->iteration}}</th>
                                             {{-- <td>1</td> --}}
                                             <td>{{$item->file_pdf}}</td>
                                             <td>{{$item->keterangan}}</td>
-                                            <td></td>
+                                            <td>{{$item->posisi['jabatan']}}</td>
                                             <td>Sudah terbaca</td>
                                             <td>
                                                 {{-- <a class="btn btn-sm btn-success">Buka</a> --}}
                                                 <a class="btn btn-sm btn-success" href="{{ url('/preview-file') }}">Buka</a>
-                                                {{-- <a onclick="return confirm('yakin hapus data?')" href="{{url('contact-delete')}}/{{$dt->id}}" class="btn btn-sm btn-danger">Delete</a> --}}
-                                                <a class="btn btn-sm btn-danger">Delete</a>
+                                                {{-- <a onclick="return confirm('yakin hapus data?')" href="/arsip/delete/{file_pdf}" class="btn btn-sm btn-danger">Delete</a> --}}
+                                                {{-- <a class="btn btn-sm btn-danger">Delete</a> --}}
+                                                <form action="/arsip/delete/{{$item->file_pdf}}" method="POST" onsubmit="return confirm('Yakin Hapus Data?')" style="display: inline">
+                                                    @method('delete')
+                                                    @csrf
+                                                    <button class="btn btn-sm btn-danger">Delete</button>
+                                                </form>
                                             </td>
+
                                         </tr>
                                     @endforeach
                                 </tbody>

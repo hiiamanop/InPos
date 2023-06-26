@@ -22,37 +22,67 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-    return view('auth.login');
-});
 
 // routing login
-Route::post('/auth',[AuthController::class,'login']);
+Route::middleware(['guest'])->group(function () {
+    Route::get('/', function () {
+        return view('auth.login');
+    })->name('login');
+    Route::post('/auth', [AuthController::class, 'login']);
+});
+
+Route::get('/home', function () {
+    return redirect('/arsip');
+});
+
+Route::middleware(['auth'])->group(function () {
+    // routing ke halaman dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+
+    // routing ke halaman arsip
+    Route::get('/arsip', [ArsipController::class, 'showarsip']);
+
+    // routing ke halaman unggah
+    Route::get('/unggah', [UnggahController::class, 'index']);
+
+    // routing ke halaman disposisi
+    Route::get('/disposisi', [DisposisiController::class, 'index']);
+    Route::get('/disposisi-kirim', [DisposisiController::class, 'disposisi']);
+
+    //routing ke halaman disposisi-manajer
+    Route::get('/disposisi-manajer', [ManajerController::class, 'index']);
+
+    //routing ke halaman preview-file
+    Route::get('/preview-file', [PreviewController::class, 'index']);
+
+    //Routing unggah
+    Route::post('/unggah/file', [InposController::class, 'storefile']);
+
+    Route::delete('/arsip/delete/{file_pdf}', [InposController::class, 'delete']);
+});
 
 // routing logout
 // Route::get('/logout', [AuthController::class, 'login'])->name('logout');
 
-// routing ke halaman dashboard
-Route::get('/dashboard', [DashboardController::class, 'index']);
+// // routing ke halaman dashboard
+// Route::get('/dashboard', [DashboardController::class, 'index']);
 
-// routing ke halaman arsip
-Route::get('/arsip', [ArsipController::class, 'showarsip']);
+// // routing ke halaman arsip
+// Route::get('/arsip', [ArsipController::class, 'showarsip']);
 
-// routing ke halaman unggah
-Route::get('/unggah', [UnggahController::class, 'index']);
+// // routing ke halaman unggah
+// Route::get('/unggah', [UnggahController::class, 'index']);
 
-// routing ke halaman disposisi
-Route::get('/disposisi', [DisposisiController::class, 'index']);
-Route::get('/disposisi-kirim', [DisposisiController::class, 'disposisi']);
+// // routing ke halaman disposisi
+// Route::get('/disposisi', [DisposisiController::class, 'index']);
+// Route::get('/disposisi-kirim', [DisposisiController::class, 'disposisi']);
 
-//routing ke halaman disposisi-manajer
-Route::get('/disposisi-manajer', [ManajerController::class, 'index']);
+// //routing ke halaman disposisi-manajer
+// Route::get('/disposisi-manajer', [ManajerController::class, 'index']);
 
-//routing ke halaman preview-file
-Route::get('/preview-file', [PreviewController::class, 'index']);
+// //routing ke halaman preview-file
+// Route::get('/preview-file', [PreviewController::class, 'index']);
 
-//routing ke halaman error-handling
-Route::get('/error-handling-notifbox', [ErrorController::class, 'index']);
+// //Routing unggah
+// Route::post('/unggah/file',[InposController::class,'storefile']);
 
-//Routing unggah
-Route::post('/unggah/file',[InposController::class,'storefile']);

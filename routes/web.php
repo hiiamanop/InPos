@@ -4,6 +4,7 @@ use App\Http\Controllers\ArsipController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DisposisiController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ManajerController;
 use App\Http\Controllers\PreviewController;
 use App\Http\Controllers\ErrorController;
@@ -25,15 +26,11 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-});
-
 // routing login
-Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/auth',[AuthController::class,'login']);
 
 // routing logout
-Route::get('/logout', [AuthController::class, 'login'])->name('logout');
+// Route::get('/logout', [AuthController::class, 'login'])->name('logout');
 
 // routing ke halaman dashboard
 Route::get('/dashboard', [DashboardController::class, 'index']);

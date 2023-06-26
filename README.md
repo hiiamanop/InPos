@@ -65,60 +65,53 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
--- ABOUT INPOS DATABASE --
-CREATE TABLE user (                           # Tabel user digunakan untuk menampung data-data pihak 
-                                                yang terlibat di dalam aplikasi Inpos
-    id_pos VARCHAR(20) PRIMARY KEY NOT NULL,  # Atribut id_pos menampung data Nippos tiap pihak,    
-                                                digunakan sebagai primary key
-    nama VARCHAR(50),                         # Atribut nama menyimpan data nama lengkap tiap pihak
-    jabatan VARCHAR(50),                      # Atribut jabatan menyimpan posisi masing-masing pihak
-    password VARCHAR(50),                     # Atribut password menyimpan password users yang akan 
-                                                dibuat, disimpan, dan diinput di website Inpos 
-    level INT(12)                             # Atribut level menyimpan tingkat otoritas tiap user di   
-                                                website, setiap level melambangkan seberapa banyak 
-                                                tindakan dapat dilakukan dan page yang dapat       
-                                                ditampilkan oleh masing-masing user
+## -- ABOUT INPOS DATABASE --
+
+CREATE TABLE user (                           
+    id_pos VARCHAR(20) PRIMARY KEY NOT NULL, 
+    nama VARCHAR(50),                         
+    jabatan VARCHAR(50),                      
+    password VARCHAR(50),                     
+    level INT(12)                             
 );
 
-CREATE TABLE file (                                   # Tabel file digunakan untuk menampung seluruh 
-                                                        berkas yang diinputkan oleh sekretaris (admin) 
-                                                        lalu untuk kemudian diproses
-    nomor_surat VARCHAR(50) PRIMARY KEY NOT NULL,     # Atribut nomor_surat digenerate secara otomatis  
-                                                        sesuai nama KCP, tanggal, dan nomor urut, 
-                                                        dijadikan sebagai primary key 
-    nama_file VARCHAR(50),                            # Atribut nama_file berisi nama_file yang         
-                                                        digenerate secara otomatis dengan tanggal dan 
-                                                        nomor urut, lalu berisi nama file
-    tanggal DATE,                                     # Atribut tanggal berisi informasi waktu file 
-                                                        ketika diupload di website
-    file VARCHAR(255),                                # Atribut file berisi berkas yang diupload oleh   
-                                                        sekretaris (admin)
-    id_pos VARCHAR(20),                               # Atribut id_pos merupakan foreign key yang diambil 
-                                                        dari tabel user untuk mengidentifikasi berkas 
-                                                        file yang diupload ditujukan ke divisi/pihak mana
+- Tabel user digunakan untuk menampung data-data pihak yang terlibat di dalam aplikasi Inpos
+- Atribut id_pos menampung data Nippos tiap pihak, digunakan sebagai primary key
+- Atribut nama menyimpan data nama lengkap tiap pihak
+- Atribut jabatan menyimpan posisi masing-masing pihak
+- Atribut password menyimpan password users yang akan dibuat, disimpan, dan diinput di website Inpos 
+- Atribut level menyimpan tingkat otoritas tiap user di website, setiap level melambangkan seberapa banyak tindakan dapat dilakukan dan page yang dapat     ditampilkan oleh masing-masing user
+
+CREATE TABLE file (                                  
+    nomor_surat VARCHAR(50) PRIMARY KEY NOT NULL,     
+    nama_file VARCHAR(50),                            
+    tanggal DATE,                                     
+    file VARCHAR(255),                                
+    id_pos VARCHAR(20),                               
     FOREIGN KEY (id_pos) REFERENCES user(id_pos)
 );
 
-CREATE TABLE disposisi (                                      # Tabel disposisi digunakan untuk menampung 
-                                                                seluruh berkas yang diaposisikan ke pihak 
-                                                                tujuan sesuai kebutuhan dan keperluan
-    id_disposisi VARCHAR(50) PRIMARY KEY NOT NULL,            # Atribut id_disposisi menyimpan nomor urut 
-                                                                berkas yang diaposisikan
-    perihal VARCHAR(50),                                      # Atribut perihal berisi maksud dan tujuan 
-                                                                diberlakukannya disposisi terhadap berkas 
-                                                                terkait
-    catatan VARCHAR(50),                                      # Atribut catatan digunakan untuk menyimpan 
-                                                                catatan tambahan dari file aposisi
-    status INT(12),                                           # Atribut status memberikan nilai integer 
-                                                                yang mewakilkan status berkas yang telah 
-                                                                diaposisi, misal nilai 0 mengindikasikan 
-                                                                berkas telah dibaca
-    divisi VARCHAR(50),                                       # Atribut divisi berisi nama-nama divisi 
-                                                                yang ada, disposisi bisa saja ditunjukkan 
-                                                                ke salah satu divisi ataupun ke seluruh
-    nomor_surat VARCHAR(50),                                  # Atribut nomor_surat merupakan foreign key 
-                                                                dari tabel file, mengidentifikasi surat 
-                                                                yang telah diinput dan didisposisi sesuai 
-                                                                kebutuhan
+ - Tabel file digunakan untuk menampung seluruh berkas yang diinputkan oleh sekretaris (admin) lalu untuk kemudian diproses
+ - Atribut nomor_surat digenerate secara otomatis sesuai nama KCP, tanggal, dan nomor urut, dijadikan sebagai primary key 
+ - Atribut nama_file berisi nama_file yang digenerate secara otomatis dengan tanggal dan nomor urut, lalu berisi nama file
+ - Atribut tanggal berisi informasi waktu file ketika diupload di website
+ - Atribut file berisi berkas yang diupload oleh sekretaris (admin)
+ - Atribut id_pos merupakan foreign key yang diambil dari tabel user untuk mengidentifikasi berkas file yang diupload ditujukan ke divisi/pihak mana
+
+CREATE TABLE disposisi (                                      
+    id_disposisi VARCHAR(50) PRIMARY KEY NOT NULL,            
+    perihal VARCHAR(50),                                     
+    catatan VARCHAR(50),                                      
+    status INT(12),                                           
+    divisi VARCHAR(50),                                    
+    nomor_surat VARCHAR(50),                                 
     FOREIGN KEY (nomor_surat) REFERENCES file(nomor_surat)
 );
+
+- Tabel disposisi digunakan untuk menampung seluruh berkas yang diaposisikan ke pihak tujuan sesuai kebutuhan dan keperluan
+- Atribut id_disposisi menyimpan nomor urut berkas yang diaposisikan
+- Atribut perihal berisi maksud dan tujuan diberlakukannya disposisi terhadap berkas terkait
+- Atribut catatan digunakan untuk menyimpan catatan tambahan dari file aposisi
+- Atribut status memberikan nilai integer yang mewakilkan status berkas yang telah diaposisi, misal nilai 0 mengindikasikan berkas telah dibaca
+- Atribut divisi berisi nama-nama divisi yang ada, disposisi bisa saja ditunjukkan ke salah satu divisi ataupun ke seluruh
+- Atribut nomor_surat merupakan foreign key dari tabel file, mengidentifikasi surat  yang telah diinput dan didisposisi sesuai kebutuhan

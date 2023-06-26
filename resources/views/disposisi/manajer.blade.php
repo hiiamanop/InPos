@@ -4,12 +4,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Disposisi</h1>
+            <h1>Disposisi Staff</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
                     <li class="breadcrumb-item">Menu</li>
-                    <li class="breadcrumb-item active">Disposisi</li>
+                    <li class="breadcrumb-item active">Disposisi Staff</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -20,26 +20,26 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Disposisi</h5>
+                            <h5 class="card-title">Disposisi Manajer ke Staff</h5>
 
                             <!-- General Form Elements -->
                             <form method="POST" action="{{ url('disposisi-kirim') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row mb-3">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Tujuan Divisi</label>
+                                    <label for="inputText" class="col-sm-2 col-form-label">Staff Tujuan</label>
                                     <div class="col-sm-10">
                                         <select name="divisi" id="divisi" class="form-control">
-                                            <option disabled selected value>Pilih divisi</option>
-                                            <option value="1">Deputi EGM</option>
-                                            <option value="2">Pelayanan Outlet & Operasi Cabang</option>
-                                            <option value="3">Operasi Kurir</option>
-                                            <option value="4">Solusi Teknologi</option>
-                                            <option value="5">Keuangan & Aset</option>
-                                            <option value="6">Kesekretariatan</option>
-                                            <option value="7">Pengawas Umum</option>
-                                            <option value="8">Bisnis Jasa Keuangan</option>
-                                            <option value="9">Penjualan, Korporat, Kurir Logistik</option>
-                                            <option value="10">Ritel/Kemitraan</option>
+                                            <option disabled selected value>Pilih nama Staff</option>
+                                            <option value="1">Asisten Manajer</option>
+                                            <option value="2">Anop Jelek</option>
+                                            <option value="3">Anop Tolol</option>
+                                            <option value="4">Anop Oon</option>
+                                            <option value="5">Anop Bodoh</option>
+                                            <option value="6">Anop Tidak Waras</option>
+                                            <option value="7">Anop Badut</option>
+                                            <option value="8">Anop Prik</option>
+                                            <option value="9">Anop Anjing</option>
+                                            <option value="10">Anop Gilo</option>
                                             <option value="11" style="font-weight:bold">Semua</option>
                                         </select>
                                     </div>

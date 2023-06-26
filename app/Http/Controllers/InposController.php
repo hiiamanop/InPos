@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Helpers\Helper;
 use App\Models\Files;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class InposController extends Controller
 {
@@ -37,5 +38,11 @@ class InposController extends Controller
 
         Files::create($data);
         return redirect('/unggah')->with('success', 'Berhasil Memasukkan Data');
+    }
+
+    public function delete($file_pdf)
+    {
+        DB::table('file')->where('file_pdf', $file_pdf)->delete();
+        return redirect('/arsip')->with('status', 'File berhasil dihapus');
     }
 }

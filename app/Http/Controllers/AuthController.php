@@ -10,6 +10,7 @@ class AuthController extends Controller
 {
     public function login(Request $request)
       {
+        // dd($request);
           $credentials = $request->validate([
               'id_pos' => ['required'],
               'password' => ['required'],

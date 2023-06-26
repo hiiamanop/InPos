@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 
 class ArsipController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('arsip.index');
     }
 
@@ -18,9 +19,6 @@ class ArsipController extends Controller
         return view("arsip.index", ['arsip' => $arsip]);
     }
 
-    // public function getDataById() {
-    //     $posisi = User::with();
-    // }
 
 
 }

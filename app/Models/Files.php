@@ -13,9 +13,10 @@ class Files extends Model
     protected $fillable = ['nomor_surat', 'nama_file', 'tanggal', 'id_pos', 'file_pdf', 'keterangan'];
     public $timestamps = false;
 
-    public function user()
+
+    public function posisi()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'id_pos', 'id_pos');
     }
 
 }

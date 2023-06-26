@@ -8,29 +8,22 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    //menampilkan form login
-    // public function login ()
-    // {
-    //     // jika ada sesion yang login, maka akan diarahkan ke routing dashboard
-    //     if (Auth::check() == true) {
+    // menampilkan form login
+    public function login ()
+    {
+            return view('auth.login');
+    }
 
-    //         //arahkan ke routing dashboard
-    //         return redirect ('dashboard');
-    //     } else {
-    //         return view('auth.login');
-    //     }
-    // }
-
-    public function login(Request $request)
+    public function loginProcess(Request $request)
       {
           $credentials = $request->validate([
-              'id_pos' => ['required'],
+              'id' => ['required'],
               'password' => ['required'],
           ]);
 
-          $user = User::where('id_pos', $request->id_pos)->first();
+          $user = User::where('id', $request->id)->first();
           session(
-              ['id_pos' => $user->id_pos],
+              ['id' => $user->id],
           );
 
 

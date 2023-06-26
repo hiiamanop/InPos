@@ -7,6 +7,7 @@ use App\Http\Controllers\DisposisiController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ManajerController;
 use App\Http\Controllers\PreviewController;
+use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\InposController;
 use App\Http\Controllers\UnggahController;
 use Illuminate\Support\Facades\Route;
@@ -85,4 +86,3 @@ Route::middleware(['auth'])->group(function () {
 // //Routing unggah
 // Route::post('/unggah/file',[InposController::class,'storefile']);
 
-// Route::delete('/arsip/delete/{file_pdf}', [InposController::class, 'delete']);

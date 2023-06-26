@@ -57,11 +57,11 @@
               <div class="card mb-3">
 
                 <div class="card-body">
-                  
+
                   {{-- cek jika ada session yang namanya error (yg dikirimkan menggunakan with pada authcontroller fungsi loginProcess) --}}
                   @if (Session::get('error')) {{-- mengambil session --}}
                   <div class='mt-4 alert alert-warning alert-dismissible fade show' role="alert">
-                    <strong>Kesalahan!</strong>{{ Session::get('error')}} 
+                    <strong>Kesalahan!</strong>{{ Session::get('error')}}
                     {{-- cetak pesan yang diterima dari authcontroller fungsi loginprocess yang dikirimkan menggunakan ketword with yang telah dibuat --}}
                   </div>
                   @endif
@@ -73,18 +73,21 @@
 
                   <form class="row g-3 needs-validation" method="POST" action="{{url('loginProcess')}}" novalidate>
                     @csrf
+                  <form class="row g-3" action="/login" method="POST" >
+                    @csrf
+                    @method('POST')
                     <div class="col-12">
-                      <label for="yourUsername" class="form-label">Username</label>
+                      <label for="id_pos" class="form-label">Username</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="email" class="form-control" id="yourUsername" required>
+                        <input type="text" name="id_pos" class="form-control" id="id_pos" required>
                         <div class="invalid-feedback">Harap masukan usename anda!</div>
                       </div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" name="password" class="form-control" id="password" required>
                       <div class="invalid-feedback">Harap masukan password anda!</div>
                     </div>
 
@@ -97,9 +100,9 @@
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit" >Masuk</button>
                     </div>
-                    <div class="col-12">
+                    {{-- <div class="col-12">
                       <p class="small mb-0">Belum memiliki akaun? <a href="pages-register.html">Buat akun</a></p>
-                    </div>
+                    </div> --}}
                   </form>
 
                 </div>

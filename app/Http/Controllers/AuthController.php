@@ -2,61 +2,49 @@
 
 namespace App\Http\Controllers;
 
-use Exception;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
     //menampilkan form login
-    public function login () 
-    {
-        // jika ada sesion yang login, maka akan diarahkan ke routing dashboard
-        if (Auth::check() == true) {
-            
-            //arahkan ke routing dashboard
-            return redirect ('dashboard');
-        } else {
-            return view('auth.login');
-        }
-    }
+    // public function login ()
+    // {
+    //     // jika ada sesion yang login, maka akan diarahkan ke routing dashboard
+    //     if (Auth::check() == true) {
 
-    public function loginProcess (Request $request)
-    {
-        // data yang akan diinputkan, sesuai dengan nama inputan pada form login
+    //         //arahkan ke routing dashboard
+    //         return redirect ('dashboard');
+    //     } else {
+    //         return view('auth.login');
+    //     }
+    // }
 
-        $data = [
-            'email' => $request->input('email'), // nama pada inputan email
-            'password' => $request->input('password') // nama pada inputan password
-        ];
+    public function login(Request $request)
+      {
+          $credentials = $request->validate([
+              'id_pos' => ['required'],
+              'password' => ['required'],
+          ]);
 
-        try {
-            // cek keseuaian data autentikasi login (baan laravel)
-            Auth::attempt($data);
+          $user = User::where('id_pos', $request->id_pos)->first();
+          session(
+              ['id_pos' => $user->id_pos],
+          );
 
-            if(Auth::check()) {
-                //login success
-                return redirect('/dashboard');
-            } else {
-                // login gagal
-                return redirect()->back()->with([
-                    //kembali ke halaman sebelumnya dan kirim data denga keyword with
-                    'error' => "Username/ Password Salah"
-                ]);
-            }
-            
-        } catch (Exception $e) {
-            // jika terdapat error, kembalikan ke halaman sebelumnya dan kirim data pesan errornya
 
-            return redirect()->back()->with([
-                'error' => $e->getMessage()
-            ]);
-        }
-    }
+          if (Auth::attempt($credentials)) {
+              $request->session()->regenerate();
 
-    public function logout () 
+              return redirect()->intended('/dashboard');
+          }
+          return redirect('/login')->with('Errors', 'Username atau password salah');
+      }
+
+    public function logout ()
     {
             return view('auth.login');
     }
-    
+
 }

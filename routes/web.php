@@ -21,14 +21,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// Route::get('/login', function () {
-//     return view('auth.login');
-// });
-
-Route::get('/login',[LoginController::class,'index']);
+Route::get('/', function () {
+    return view('auth.login');
+});
 
 // routing login
-Route::post('/login',[AuthController::class,'login']);
+Route::post('/auth',[AuthController::class,'login']);
 
 // routing logout
 // Route::get('/logout', [AuthController::class, 'login'])->name('logout');

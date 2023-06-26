@@ -36,10 +36,10 @@ class AuthController extends Controller
 
           if (Auth::attempt($credentials)) {
               $request->session()->regenerate();
-
+                // dd($user->id_pos);
               return redirect()->intended('/dashboard');
           }
-          return redirect('/login')->with('Errors', 'Username atau password salah');
+          return redirect('/')->with('Errors', 'Password salah');
       }
 
     public function logout ()

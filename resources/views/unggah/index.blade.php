@@ -31,7 +31,12 @@
                                         <input type="file" value="" name="file_pdf" class="form-control" id="file_pdf">
                                     </div>
                                 </div>
-
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Keterangan</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="" name="lampiran" class="form-control">
+                                    </div>
+                                </div>
                                 <div class="row mb-3">
                                     <label class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">

@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DisposisiController;
 use App\Http\Controllers\ManajerController;
 use App\Http\Controllers\PreviewController;
+use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\InposController;
 use App\Http\Controllers\UnggahController;
 use Illuminate\Support\Facades\Route;
@@ -52,6 +53,9 @@ Route::get('/disposisi-manajer', [ManajerController::class, 'index']);
 
 //routing ke halaman preview-file
 Route::get('/preview-file', [PreviewController::class, 'index']);
+
+//routing ke halaman error-handling
+Route::get('/error-handling-notifbox', [ErrorController::class, 'index']);
 
 //Routing unggah
 Route::post('/unggah/file',[InposController::class,'storefile']);

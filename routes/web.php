@@ -35,7 +35,7 @@ Route::post('/auth',[AuthController::class,'login']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
 // routing ke halaman arsip
-Route::get('/arsip', [ArsipController::class, 'index']);
+Route::get('/arsip', [ArsipController::class, 'showarsip']);
 
 // routing ke halaman unggah
 Route::get('/unggah', [UnggahController::class, 'index']);

@@ -9,7 +9,7 @@ class Helper
         $data = $model::orderBy('nomor_surat', 'desc')->first();
         if (!$data) {
             $og_length = $length;
-            $last_number = '';
+            $last_number = '1';
         } else {
             $code = (int)(substr($data->$trow, strlen($prefix)+1));
             $actial_last_number = (int)($code / 1) * 1;
@@ -32,7 +32,7 @@ class Helper
         $data = $model::orderBy('nomor_surat', 'desc')->first();
         if (!$data) {
             $og_length = $length;
-            $last_number = '';
+            $last_number = '1';
         } else {
             $code = (int)(substr($data->$trow, strlen($prefix)+1));
             $actial_last_number = (int)($code / 1) * 1;

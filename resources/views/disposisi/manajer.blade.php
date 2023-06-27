@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <main id="main" class="main">
+   <main id="main" class="main">
 
         <div class="pagetitle">
             <h1>Disposisi Staff</h1>
@@ -160,4 +160,5 @@
         </section>
 
     </main><!-- End #main -->
-@endsection
+    @endsection
+

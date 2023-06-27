@@ -72,8 +72,8 @@
                     <p class="text-center small">Masukan username dan password anda </p>
                   </div>
 
-                  <form class="row g-3" action="/auth" method="POST" >
-                    @csrf
+                  <form class="row g-3" action="/dashboard" method="" >
+                    {{-- @csrf --}}
                     <div class="col-12">
                       <label for="id_pos" class="form-label">Username</label>
                       <div class="input-group has-validation">
@@ -96,7 +96,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit" href="">Masuk</button>
+                      <button class="btn btn-primary w-100" type="submit" ">Masuk</button>
                     </div>
                     {{-- <div class="col-12">
                       <p class="small mb-0">Belum memiliki akaun? <a href="pages-register.html">Buat akun</a></p>

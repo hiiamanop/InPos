@@ -9,8 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function login(Request $request)
-    {
+    public function loginProcess(Request $request)
+ 
+      {
+
         // dd($request);
         $credentials = $request->validate([
             'id_pos' => ['required'],

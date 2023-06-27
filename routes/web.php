@@ -33,33 +33,34 @@ Route::post('/auth', [AuthController::class, 'login']);
 
 
 Route::group(['middleware' => ['auth']], function () {
-    // routing logout
-    Route::get('/logout', [AuthController::class, 'logout']);
-
-    // routing ke halaman dashboard
-    Route::get('/dashboard', [DashboardController::class, 'index']);
-
-    // routing ke halaman arsip
-    Route::get('/arsip', [ArsipController::class, 'showarsip']);
-
-    // routing ke halaman unggah
-    Route::get('/unggah', [UnggahController::class, 'index']);
-
-    // routing ke halaman disposisi
-    Route::get('/disposisi', [DisposisiController::class, 'index']);
-    Route::get('/disposisi-kirim', [DisposisiController::class, 'disposisi']);
-
-    //routing ke halaman disposisi-manajer
-    Route::get('/disposisi-manajer', [ManajerController::class, 'index']);
-
-    //routing ke halaman preview-file
-    Route::get('/preview-file', [PreviewController::class, 'index']);
-
-    //Routing unggah
-    Route::post('/unggah/file', [InposController::class, 'storefile']);
-
-    Route::delete('/arsip/delete/{file_pdf}', [InposController::class, 'delete']);
 });
+
+// routing logout
+Route::get('/logout', [AuthController::class, 'logout']);
+
+// routing ke halaman dashboard
+Route::get('/dashboard', [DashboardController::class, 'index']);
+
+// routing ke halaman arsip
+Route::get('/arsip', [ArsipController::class, 'showarsip']);
+
+// routing ke halaman unggah
+Route::get('/unggah', [UnggahController::class, 'index']);
+
+// routing ke halaman disposisi
+Route::get('/disposisi', [DisposisiController::class, 'index']);
+Route::get('/disposisi-kirim', [DisposisiController::class, 'disposisi']);
+
+//routing ke halaman disposisi-manajer
+Route::get('/disposisi-manajer', [ManajerController::class, 'index']);
+
+//routing ke halaman preview-file
+Route::get('/preview-file', [PreviewController::class, 'index']);
+
+//Routing unggah
+Route::post('/unggah/file', [InposController::class, 'storefile']);
+
+Route::delete('/arsip/delete/{file_pdf}', [InposController::class, 'delete']);
 
 
 

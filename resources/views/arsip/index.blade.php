@@ -55,21 +55,22 @@
                                 <tbody>
                                     @foreach ($arsip as $item)
                                         <tr>
-                                            <th scope="row">{{$loop->iteration}}</th>
+                                            <th scope="row">{{ $loop->iteration }}</th>
                                             {{-- <td>1</td> --}}
-                                            <td>{{$item->file_pdf}}</td>
-                                            <td>{{$item->keterangan}}</td>
-                                            <td>{{$item->posisi['jabatan']}}</td>
+                                            <td>{{ $item->file_pdf }}</td>
+                                            <td>{{ $item->keterangan }}</td>
+                                            <td>{{ $item->posisi['jabatan'] }}</td>
                                             <td>Sudah terbaca</td>
                                             <td>
                                                 {{-- <a class="btn btn-sm btn-success">Buka</a> --}}
                                                 <a class="btn btn-sm btn-success" href="{{ url('/preview-file') }}">Buka</a>
                                                 {{-- <a onclick="return confirm('yakin hapus data?')" href="/arsip/delete/{file_pdf}" class="btn btn-sm btn-danger">Delete</a> --}}
                                                 {{-- <a class="btn btn-sm btn-danger">Delete</a> --}}
-                                                <form action="/arsip/delete/{{$item->file_pdf}}" method="POST" onsubmit="return confirm('Yakin Hapus Data?')" style="display: inline">
+                                                <form action="/arsip/delete/{{ $item->file_pdf }}" method="POST"
+                                                    style="display: inline">
                                                     @method('delete')
                                                     @csrf
-                                                    <button class="btn btn-sm btn-danger">Delete</button>
+                                                    <button class="btn btn-sm btn-danger" id="delete">Delete</button>
                                                 </form>
                                             </td>
 

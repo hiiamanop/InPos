@@ -64,6 +64,7 @@
                     <strong>{{ Session::get('Errors')}}</strong>
                     {{-- cetak pesan yang diterima dari authcontroller fungsi loginprocess yang dikirimkan menggunakan ketword with yang telah dibuat --}}
                   </div>
+
                   @endif
 
                   <div class="pt-4 pb-2">
@@ -136,7 +137,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('backend/assets/js/main.js')}}"></script>
-
+  @include('sweetalert::alert')
 </body>
 
 </html>

@@ -28,7 +28,8 @@ class AuthController extends Controller
             // dd($user->id_pos);
             return redirect()->intended('/dashboard');
         }
-        return redirect('/')->with('Errors', 'Password salah');
+        return redirect('/')->with('errors', 'Password yang anda masukkan salah');
+
 
 
     }

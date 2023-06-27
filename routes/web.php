@@ -24,18 +24,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 // routing login
-Route::middleware(['guest'])->group(function () {
-    Route::get('/', function () {
-        return view('auth.login');
-    })->name('login');
-    Route::post('/auth', [AuthController::class, 'login']);
-});
 
-Route::get('/home', function () {
-    return redirect('/arsip');
-});
+Route::get('/', function () {
+    return view('auth.login');
+})->name('login');
+Route::post('/auth', [AuthController::class, 'login']);
 
-Route::middleware(['auth'])->group(function () {
+
+
+Route::group(['middleware' => ['auth']], function () {
+    // routing logout
+    Route::get('/logout', [AuthController::class, 'logout']);
+
     // routing ke halaman dashboard
     Route::get('/dashboard', [DashboardController::class, 'index']);
 
@@ -61,8 +61,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/arsip/delete/{file_pdf}', [InposController::class, 'delete']);
 });
 
-// routing logout
-// Route::get('/logout', [AuthController::class, 'login'])->name('logout');
+
 
 // // routing ke halaman dashboard
 // Route::get('/dashboard', [DashboardController::class, 'index']);
@@ -85,4 +84,3 @@ Route::middleware(['auth'])->group(function () {
 
 // //Routing unggah
 // Route::post('/unggah/file',[InposController::class,'storefile']);
-

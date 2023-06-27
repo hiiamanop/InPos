@@ -17,22 +17,22 @@ class AuthController extends Controller
     public function loginProcess(Request $request)
       {
           $credentials = $request->validate([
-              'id' => ['required'],
+              'id_pos' => ['required'],
               'password' => ['required'],
           ]);
 
-          $user = User::where('id', $request->id)->first();
+          $user = User::where('id_pos', $request->id_pos)->first();
           session(
-              ['id' => $user->id],
+              ['id_pos' => $user->id_pos],
           );
 
 
           if (Auth::attempt($credentials)) {
               $request->session()->regenerate();
-
+                // dd($user->id_pos);
               return redirect()->intended('/dashboard');
           }
-          return redirect('/login')->with('Errors', 'Username atau password salah');
+          return redirect('/')->with('Errors', 'Password salah');
       }
 
     public function logout ()

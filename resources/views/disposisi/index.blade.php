@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-
 {{-- CONTACT PAGE --}}
 <main id="main" class="main">
 
@@ -96,3 +95,4 @@
 
 </main><!-- End #main -->
 @endsection
+

@@ -59,9 +59,9 @@
                 <div class="card-body">
 
                   {{-- cek jika ada session yang namanya error (yg dikirimkan menggunakan with pada authcontroller fungsi loginProcess) --}}
-                  @if (Session::get('error')) {{-- mengambil session --}}
+                  @if (Session::get('Errors')) {{-- mengambil session --}}
                   <div class='mt-4 alert alert-warning alert-dismissible fade show' role="alert">
-                    <strong>Kesalahan!</strong>{{ Session::get('error')}}
+                    <strong>{{ Session::get('Errors')}}</strong>
                     {{-- cetak pesan yang diterima dari authcontroller fungsi loginprocess yang dikirimkan menggunakan ketword with yang telah dibuat --}}
                   </div>
                   @endif
@@ -71,9 +71,8 @@
                     <p class="text-center small">Masukan username dan password anda </p>
                   </div>
 
-                  
-                  <form class="row g-3" method="POST" action="{{url('loginProcess')}}" novalidate>
-                    @csrf
+                  <form class="row g-3" action="/dashboard" method="" >
+                    {{-- @csrf --}}
                     <div class="col-12">
                       <label for="id_pos" class="form-label">Username</label>
                       <div class="input-group has-validation">
@@ -96,11 +95,11 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit" >Masuk</button>
+                      <button class="btn btn-primary w-100" type="submit" ">Masuk</button>
                     </div>
-                    <div class="col-12">
+                    {{-- <div class="col-12">
                       <p class="small mb-0">Belum memiliki akaun? <a href="pages-register.html">Buat akun</a></p>
-                    </div>
+                    </div> --}}
                   </form>
 
                 </div>

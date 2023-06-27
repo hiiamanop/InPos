@@ -24,14 +24,10 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-});
-
 // routing auth
 Route::get('/login ', [AuthController::class, 'login'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::post('/loginProcess', [AuthController::class, 'loginProcess']);
+Route::post('/auth', [AuthController::class, 'loginProcess']);
 
 
 // routing ke halaman dashboard

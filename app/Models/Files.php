@@ -10,8 +10,13 @@ class Files extends Model
     use HasFactory;
     protected $table = 'file';
 
-    protected $fillable = ['nomor_surat', 'nama_file', 'tanggal', 'id_pos','file_pdf'];
+    protected $fillable = ['nomor_surat', 'nama_file', 'tanggal', 'id_pos', 'file_pdf', 'keterangan'];
     public $timestamps = false;
 
+
+    public function posisi()
+    {
+        return $this->belongsTo(User::class, 'id_pos', 'id_pos');
+    }
 
 }

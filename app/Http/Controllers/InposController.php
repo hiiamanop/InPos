@@ -33,7 +33,6 @@ class InposController extends Controller
             'id_pos' => Session('id_pos'),
             'file_pdf' => $foto_nama,
             'keterangan' => $request->input('keterangan')
-
         ];
 
         Files::create($data);
@@ -43,6 +42,6 @@ class InposController extends Controller
     public function delete($file_pdf)
     {
         DB::table('file')->where('file_pdf', $file_pdf)->delete();
-        return redirect('/arsip')->with('status', 'File berhasil dihapus');
+        return redirect('/arsip')->with('success', 'File berhasil dihapus');
     }
 }

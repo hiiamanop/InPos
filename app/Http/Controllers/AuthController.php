@@ -2,37 +2,45 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function login(Request $request)
+    public function loginProcess(Request $request)
+ 
       {
+
         // dd($request);
-          $credentials = $request->validate([
-              'id_pos' => ['required'],
-              'password' => ['required'],
-          ]);
+        $credentials = $request->validate([
+            'id_pos' => ['required'],
+            'password' => ['required'],
+        ]);
 
-          $user = User::where('id_pos', $request->id_pos)->first();
-          session(
-              ['id_pos' => $user->id_pos],
-          );
+        $user = User::where('id_pos', $request->id_pos)->first();
+        session(
+            ['id_pos' => $user->id_pos],
+        );
 
 
-          if (Auth::attempt($credentials)) {
-              $request->session()->regenerate();
-                // dd($user->id_pos);
-              return redirect()->intended('/dashboard');
-          }
-          return redirect('/')->with('Errors', 'Password salah');
-      }
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            // dd($user->id_pos);
+            return redirect()->intended('/dashboard');
+        }
+        return redirect('/')->with('errors', 'Password yang anda masukkan salah');
 
-    public function logout ()
+
+
+    }
+
+
+    public function logout(Request $request)
     {
-            return view('auth.login');
+        Auth::logout();
+        return redirect('/');
     }
 
 }

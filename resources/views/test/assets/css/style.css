@@ -1,0 +1,356 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.logo {
+    margin-left: 49px;
+    margin-top: 49px;
+}
+
+.tulisan {
+    margin-left: -358px;
+    margin-top: 59px;
+}
+
+.navigasi {
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.cara a {
+    margin-right: 80px;
+}
+
+.navigasi li {
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.navigasi button {
+    margin-right: 49px;
+    border-radius: 40px;
+    height: 60px;
+    width: 140px;
+    background-color: #FF6F00;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.bannerCon {
+    background-image: url("../img/bg.png");
+
+}
+
+.banner {
+    border-radius: 15px;
+}
+
+.carousel .item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+}
+
+.bannerComp {
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 18px 40px 0px rgba(0, 0, 0, 0.50);
+    ;
+    width: 835px;
+    height: 432px;
+}
+
+.bannerComp img {
+    width: 835px;
+    height: 432px;
+    border-radius: 15px;
+}
+
+.website p {
+    margin-top: 45px;
+    margin-bottom: 56px;
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.tentang {
+    margin-top: 130px;
+    padding-right: 100px;
+}
+
+.tentang h1 {
+    color: #F15A2B;
+    font-size: 30px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 124.5%;
+}
+
+.tentang p {
+    color: #000;
+    text-align: justify;
+    font-size: 17px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.tentang button {
+    border-radius: 40px;
+    background: #F15A2B;
+    box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    font-size: 18px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 15px;
+}
+
+.penerapan {
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.card {
+    width: 433px;
+    height: 450px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 4px solid #000;
+}
+
+.card h5 {
+    color: #000;
+    font-size: 27px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -1px;
+}
+
+.card h2 {
+    color: #000;
+    font-size: 14px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.kartuGamber {
+    margin-top: -10px;
+}
+
+.atas {
+    margin-bottom: 19px;
+}
+
+.tutor {
+    background-image: url("../img/back.png");
+}
+
+.tutor span {
+    color: var(--textclr, #5E6282);
+    text-align: center;
+    font-size: 18px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    margin-left: 225px;
+}
+
+.caraJudul {
+    margin-bottom: 50px;
+    color: #F15A2B;
+    font-size: 45px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.step {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 200px;
+}
+
+.baris {
+    margin-bottom: 25px;
+}
+
+.caption {
+    margin-right: -450px;
+    margin-bottom: 50px;
+}
+
+.HeadCap {
+    color: var(--textclr, #5E6282);
+    font-size: 16px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 124.5%;
+}
+
+.BotCap {
+    color: var(--textclr, #5E6282);
+    font-size: 16px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124.5%;
+}
+
+.video {
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+.card iframe {
+    margin-left: 15px;
+    margin-top: 24px;
+    border-radius: 10px;
+}
+
+.videoplay h5 {
+    margin-left: 15px;
+}
+
+.videoplay p {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.tombolPlay {
+    margin-top: 20px;
+}
+
+.tombolPlay p {
+    font-size: 15px;
+    color: var(--textclr, #5E6282);
+}
+
+.play img {
+    margin-left: 20px;
+    margin-top: -100px;
+}
+
+.send img {
+    margin-left: -140px;
+    margin-top: -100px;
+}
+
+.footer {
+    background-color: #F15A2B;
+}
+
+.logofooter {
+    margin-top: 60px;
+    margin-bottom: 70px;
+    margin-right: 50px;
+    color: #FFF;
+    font-size: 18px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.logofooter img {
+    margin-bottom: 30px;
+}
+
+.navBawah {
+    margin-top: 70px;
+    padding-left: 120px;
+}
+
+.navBawah li {
+    color: #FFF;
+    font-size: 18px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.hubungi {
+    margin-top: 85px;
+    color: #FFF;
+    font-size: 22px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.hubungi p {
+    padding-left: 400px;
+}
+
+.hubungi img {
+    padding-left: 400px;
+}
+
+.copy {
+    color: #FFF;
+    font-size: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+@scroll-timeline element move {
+    source : auto;
+    orientation: :vertical;
+    scroll-offsets : selector(#myElement) start 0, selector(#myElement) end 0;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(Spx);
+    transform: translate(-100%);
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}

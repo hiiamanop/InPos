@@ -8,6 +8,8 @@ use App\Http\Controllers\ManajerController;
 use App\Http\Controllers\PreviewController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\InposController;
+use App\Http\Controllers\KonfirmasiController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\UnggahController;
 use Illuminate\Support\Facades\Route;
 
@@ -60,9 +62,12 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/arsip/delete/{file_pdf}', [InposController::class, 'delete']);
 });
 
+ // Routing konfirmasi
+ Route::get('/konfirmasi-post', [KonfirmasiController::class, 'post']); 
+ Route::get('/konfirmasi-get', [KonfirmasiController::class, 'get']); 
 
-// // routing ke halaman dashboard
-// Route::get('/dashboard', [DashboardController::class, 'index']);
+// // routing ke halaman landing
+Route::get('/landing', [LandingController::class, 'landing']);
 
 // // routing ke halaman arsip
 // Route::get('/arsip', [ArsipController::class, 'showarsip']);

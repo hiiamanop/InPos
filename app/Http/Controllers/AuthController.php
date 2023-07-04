@@ -8,17 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-<<<<<<< HEAD
-    // menampilkan form login
-    public function login ()
-    {
-            return view('auth.login');
-    }
-
-    public function loginProcess(Request $request)
-=======
     public function login(Request $request)
->>>>>>> 7255af853a252abca41c99b6ae3318bb2d04bbc6
       {
         // dd($request);
           $credentials = $request->validate([

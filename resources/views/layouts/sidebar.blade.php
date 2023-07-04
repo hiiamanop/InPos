@@ -26,12 +26,12 @@
             <i class="bi bi-circle"></i><span>Unggah</span>
           </a>
         </li>
+
         <li>
-          <a href="{{url('/disposisi')}}">
-            <i class="bi bi-circle"></i><span>Disposisi</span>
+          <a href="{{url('/konfirmasi-get')}}">
+            <i class="bi bi-circle"></i><span>Konfirmasi Surat</span>
           </a>
         </li>
-
       </ul>
     </li> <!-- End Components Nav -->
   </ul>

@@ -137,7 +137,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('backend/assets/js/main.js')}}"></script>
-  @include('sweetalert::alert')
+  {{-- @include('sweetalert::alert') --}}
 </body>
 
 </html>

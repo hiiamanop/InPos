@@ -15,4 +15,9 @@ class KonfirmasiController extends Controller
     {
         return view('konfirmasi.post');
     }
+
+    public function staff()
+    {
+        return view('konfirmasi.staff');
+    }
 }

@@ -67,9 +67,11 @@ Route::delete('/arsip/delete/{file_pdf}', [InposController::class, 'delete']);
  // Routing konfirmasi
  Route::get('/konfirmasi-post', [KonfirmasiController::class, 'post']); 
  Route::get('/konfirmasi-get', [KonfirmasiController::class, 'get']); 
+ Route::get('/konfirmasi-staff', [KonfirmasiController::class, 'staff']); 
 
 // // routing ke halaman landing
 Route::get('/landing', [LandingController::class, 'landing']);
+
 
 // // routing ke halaman arsip
 // Route::get('/arsip', [ArsipController::class, 'showarsip']);

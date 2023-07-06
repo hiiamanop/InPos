@@ -55,33 +55,17 @@
                                 <tbody>
                                     {{-- @foreach ($arsip as $item)
                                         <tr>
-<<<<<<< HEAD
-                                            <th scope="row">{{$loop->iteration}}</th> --}}
-                                            {{-- <td>1</td> --}}
-                                            {{-- <td>{{$item->file_pdf}}</td>
-                                            <td>{{$item->keterangan}}</td>
-                                            <td>{{$item->posisi['jabatan']}}</td>
-=======
                                             <th scope="row">{{ $loop->iteration }}</th>
                                             {{-- <td>1</td> --}}
                                             <td>{{ $item->file_pdf }}</td>
                                             <td>{{ $item->keterangan }}</td>
                                             <td>{{ $item->posisi['jabatan'] }}</td>
->>>>>>> 01b44e373a4cd69698cf09ba97b31ea73bbfce16
                                             <td>Sudah terbaca</td>
-                                            <td> --}}
+                                            <td> 
                                                 {{-- <a class="btn btn-sm btn-success">Buka</a> --}}
                                                 {{-- <a class="btn btn-sm btn-success" href="{{ url('/preview-file') }}">Buka</a> --}}
                                                 {{-- <a onclick="return confirm('yakin hapus data?')" href="/arsip/delete/{file_pdf}" class="btn btn-sm btn-danger">Delete</a> --}}
                                                 {{-- <a class="btn btn-sm btn-danger">Delete</a> --}}
-<<<<<<< HEAD
-                                                {{-- <form action="/arsip/delete/{{$item->file_pdf}}" method="POST" onsubmit="return confirm('Yakin Hapus Data?')" style="display: inline"> --}}
-                                                    {{-- @method('delete') --}}
-                                                    {{-- @csrf --}}
-                                                    {{-- <button class="btn btn-sm btn-danger">Delete</button> --}}
-                                                {{-- </form> --}}
-                                            {{-- </td> --}}
-=======
                                                 <form action="/arsip/delete/{{ $item->file_pdf }}" method="POST"
                                                     style="display: inline">
                                                     @method('delete')
@@ -89,7 +73,6 @@
                                                     <button class="btn btn-sm btn-danger" id="delete">Delete</button>
                                                 </form>
                                             </td>
->>>>>>> 01b44e373a4cd69698cf09ba97b31ea73bbfce16
 
                                         {{-- </tr> --}}
                                     {{-- @endforeach --}}

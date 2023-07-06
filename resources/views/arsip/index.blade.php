@@ -17,7 +17,7 @@
 
         <section class="section">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-12">
 
                     <div class="card">
                         <div class="card-body">
@@ -25,7 +25,6 @@
                             {{-- <a href="{{ url('contact-add') }}" class="btn btn-primary mb-2">Add</a> --}}
 
                             <!-- Default Table -->
-                            <table class="table" id="myTable">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
@@ -52,31 +51,7 @@
                                 </tr>
                                 @endforeach --}}
                                 {{-- </tbody> --}}
-                                <tbody>
-                                    {{-- @foreach ($arsip as $item)
-                                        <tr>
-                                            <th scope="row">{{ $loop->iteration }}</th>
-                                            {{-- <td>1</td> --}}
-                                            <td>{{ $item->file_pdf }}</td>
-                                            <td>{{ $item->keterangan }}</td>
-                                            <td>{{ $item->posisi['jabatan'] }}</td>
-                                            <td>Sudah terbaca</td>
-                                            <td> 
-                                                {{-- <a class="btn btn-sm btn-success">Buka</a> --}}
-                                                {{-- <a class="btn btn-sm btn-success" href="{{ url('/preview-file') }}">Buka</a> --}}
-                                                {{-- <a onclick="return confirm('yakin hapus data?')" href="/arsip/delete/{file_pdf}" class="btn btn-sm btn-danger">Delete</a> --}}
-                                                {{-- <a class="btn btn-sm btn-danger">Delete</a> --}}
-                                                <form action="/arsip/delete/{{ $item->file_pdf }}" method="POST"
-                                                    style="display: inline">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button class="btn btn-sm btn-danger" id="delete">Delete</button>
-                                                </form>
-                                            </td>
-
-                                        {{-- </tr> --}}
-                                    {{-- @endforeach --}}
-                                </tbody>
+                                
                             </table>
                             <!-- End Default Table Example -->
                         </div>

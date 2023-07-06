@@ -10,6 +10,7 @@ use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\InposController;
 use App\Http\Controllers\KonfirmasiController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\OutgoingController;
 use App\Http\Controllers\UnggahController;
 use Illuminate\Support\Facades\Route;
 
@@ -68,6 +69,11 @@ Route::delete('/arsip/delete/{file_pdf}', [InposController::class, 'delete']);
  Route::get('/konfirmasi-post', [KonfirmasiController::class, 'post']); 
  Route::get('/konfirmasi-get', [KonfirmasiController::class, 'get']); 
  Route::get('/konfirmasi-staff', [KonfirmasiController::class, 'staff']); 
+
+ // Routing Outgoing
+ Route::get('/outgoing', [OutgoingController::class, 'index']);
+ Route::get('/outgoing-preview', [OutgoingController::class, 'preview']);
+ Route::get('/outgoing-hasil', [OutgoingController::class, 'hasil']);
 
 // // routing ke halaman landing
 Route::get('/landing', [LandingController::class, 'landing']);

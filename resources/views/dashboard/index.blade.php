@@ -43,6 +43,15 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Status Berkas <span>| Hari ini</span></h5>
 
+                                            <table class="table" id="myTable">
+                                                <div class="search-bar">
+                                                    <form class="search-form d-flex align-items-center" method="POST" action="#">
+                                                        <input type="text" name="query" placeholder="Search"
+                                                            title="Enter search keyword">
+                                                        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+                                                    </form>
+                                                </div><!-- End Search Bar -->
+
                                             <table class="table table-borderless datatable">
                                                 <thead>
                                                     <tr>
@@ -94,7 +103,6 @@
                                         <li class="dropdown-header text-start">
                                             <h6>Filter</h6>
                                         </li>
-
                                         <li><a class="dropdown-item" href="#">Hari ini</a></li>
                                         <li><a class="dropdown-item" href="#">Bulan ini</a></li>
                                         <li><a class="dropdown-item" href="#">Tahun ini</a></li>

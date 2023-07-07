@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <body>
+
+    <div style="margin-left: 35px" class="atas">
+      <header>
+          <div class="row">
+              <div class="col">
+                  <img src="../assets/img/posLogo.png"  height="30px">
+              </div>
+              <div class="col">
+                  <div class="row">
+                      <div class="col">
+                          <img src="../assets/img/pospay.png" height="20px">
+                      </div>
+                      <div class="col">
+                          <img src="../assets/img/posaja.jpg" height="20px">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+      <form action="register.html">
+      <table border="0" cellspacing="0" cellpadding="4" style="text-align: left">
+        <tr>
+          <td style="margin-left: 90px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000"><label for="username">Nomor</label></td>
+          <td>:</td>
+          <td style="margin-left: 90px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000">' . '0' . $data_diri['id_regis'] . '/' . 'OL' . '/' . $romawi .  '/' . date('Y') .     '</td>
+        </tr>
+        <tr>
+          <td style="margin-left: 90px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000"><label for="password">Lampiran</label></td>
+          <td>:</td>
+          <td style="margin-left: 90px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000"> 1 Berkas</td>
+        </tr>
+        <tr>
+          <td style="margin-left: 50px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000"><label for="fullname">Perihal </label></td>
+          <td>: </td>
+          <td style="margin-left: 90px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000">Permohonan Pinjaman Modal Kerja Program Kemitraan</td>
+        </tr>
+      </table>
+    </form>
+    </div>
+      <br />
+      <div style="margin-left: 35px" class="yth">
+        <p>Kepada Yth,</p>
+        <p>VP CSR PT Pusri Palembang</p>
+        <p>Di</p>
+        <p>Palembang</p>
+        <br />
+        <p>Dengan Hormat,</p>
+        <br />
+  
+        <p>Saya yang bertanda tangan dibawah ini :</p>
+  
+        <form >
+          <table border="0" cellspacing="0" cellpadding="4" style="text-align: left">
+            <tr>
+              <td style="margin-left: 90px;font-family:calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000"><label for="username">Nama</label></td>
+              <td>:</td>
+              <td style="margin-left: 90px;font-family:calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000">' . $data_diri['fname'] . '</td>
+            </tr>
+            <tr>
+              <td style="margin-left: 90px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000"><label for="password">Alamat</label></td>
+              <td>:</td>
+              <td style="margin-left: 90px;font-family:calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000">' . $data_diri['alamat_diri'] . '</td>
+            </tr>
+            <tr>
+              <td style="margin-left: 50px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000"><label for="fullname">Tempat/tanggal lahir</label></td>
+              <td>:</td>
+              <td style="margin-left: 50px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000">' . $data_diri['tempat_lahir'] . ', ' . date('d F Y', strtotime($data_diri['tanggal_lahir'])) . '</td> 
+            </tr>
+            <tr>
+              <td style="margin-left: 50px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000"><label for="username">Pemilik Usaha</label></td>
+              <td>:</td>
+              <td style="margin-left: 50px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000">' . $data_usaha_keuangan['nama_pemilikUsaha'] . '</td>
+            </tr>
+            <tr>
+              <td style="margin-left: 50px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000"><label for="password">Alamat Usaha</label></td>
+              <td>:</td>
+              <td style="margin-left: 50px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000">' . $data_usaha_keuangan['alamat_usaha'] . '</td>
+            </tr>
+            <tr>
+              <td style="margin-left: 50px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000"><label for="fullname">Nomor Telepon/HP</label></td>
+              <td>:</td>
+              <td style="margin-left: 50px;font-family: Calibri; font-style: normal; font-weight: 400; font-size: 12px; line-height: 15px; color: #000000">' . $data_diri['nohp_diri'] . '</td>
+            </tr>
+          </table>
+        </form>
+        <p style="width: 90%; text-align: justify">
+          Dalam rangka mengembangkan usaha perdagangan/pertanian dan sejalan dengan program pemerintah melalui BUMN pembina khususnya PT Pusri Palembang pada program Pendanaan UMK, maka kami dengan ini
+          mengajukan pinjaman modal kerja sebesar Rp. ' . $data_pinjaman['besar_pinjaman'] . '  rupiah).
+        </p>
+        <br />
+        <p style="width: 90%; text-align: justify">Untuk bahan pertimbangan Bapak/ibu berikut kami lampirkan proposal dan surat-surat lainnya sesuai dengan ketentuan yang berlaku.</p>
+        <br />
+        <p style="width: 90%; text-align: justify">Demikian permohonan pinjaman modal kerja ini kami buat, atas bantuan dan kerjasamanya diucapkan terima kasih.</p>
+      </div>
+      <br />
+  
+      <p style="width: 90%; margin-left: 40px">Pemilik Usaha</p>
+      <p style="width: 90%; margin-left: 40px"></p>
+      <br /><br /><br />
+      <p style="width: 90%; margin-left: 40px; margin-bottom: 20%">............................</p>
+   </body>
+</body>
+</html>

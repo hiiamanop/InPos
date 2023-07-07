@@ -30,27 +30,17 @@
                                         <select name="divisi" id="divisi" class="form-control">
                                             <option disabled selected value>Pilih divisi</option>
                                             <option value="1">Deputi EGM</option>
-                                            <option value="2">Pelayanan Outlet & Operasi Cabang</option>
-                                            <option value="3">Operasi Kurir</option>
-                                            <option value="4">Solusi Teknologi</option>
-                                            <option value="5">Keuangan & Aset</option>
-                                            <option value="6">Kesekretariatan</option>
-                                            <option value="7">Pengawas Umum</option>
-                                            <option value="8">Bisnis Jasa Keuangan</option>
-                                            <option value="9">Penjualan, Korporat, Kurir Logistik</option>
-                                            <option value="10">Ritel/Kemitraan</option>
+                                            <option value="2">Manajer Pelayanan Outlet & Operasi Cabang</option>
+                                            <option value="3">Manajer Operasi Kurir</option>
+                                            <option value="4">Manajer Solusi Teknologi</option>
+                                            <option value="5">Manajer Keuangan & Aset</option>
+                                            <option value="6">Manajer Kesekretariatan</option>
+                                            <option value="7">Manajer Pengawas Umum</option>
+                                            <option value="8">Manajer Bisnis Jasa Keuangan</option>
+                                            <option value="9">Manajer Penjualan, Korporat, Kurir Logistik</option>
+                                            <option value="10">Manajer Ritel/Kemitraan</option>
                                             <option value="11" style="font-weight:bold">Semua</option>
                                         </select>
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Tujuan Penerima</label>
-                                    <div class="col">
-                                        {{-- <input type="text" value="" name="tujuan" id="tujuan"
-                                            class="form-control" placeholder="Kepada..."> --}}
-                                            <textarea name="penerima" id="penerima" cols="30" rows="10" placeholder="Kepada..."
-                                            class="form-control"></textarea>
                                     </div>
                                 </div>
 

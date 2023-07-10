@@ -28,6 +28,17 @@
                                     <label for="inputText" class="col-sm-2 col-form-label">Tujuan Divisi</label>
                                     <div class="col-sm-10">
                                         <select name="divisi" id="divisi" class="form-control">
+                                            <option disabled selected value>Tujuan</option>
+                                            <option value="1">Eksternal</option>
+                                            <option value="2">Internal</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Tujuan Divisi</label>
+                                    <div class="col-sm-10">
+                                        <select name="divisi" id="divisi" class="form-control">
                                             <option disabled selected value>Pilih divisi</option>
                                             <option value="1">Deputi EGM</option>
                                             <option value="2">Manajer Pelayanan Outlet & Operasi Cabang</option>
@@ -41,6 +52,14 @@
                                             <option value="10">Manajer Ritel/Kemitraan</option>
                                             <option value="11" style="font-weight:bold">Semua</option>
                                         </select>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Tujuan</label>
+                                    <div class="col">
+                                        <input type="text" value="" name="perihal" id="perihal"
+                                            class="form-control" placeholder="Masukan Perihal">
                                     </div>
                                 </div>
 

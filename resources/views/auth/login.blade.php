@@ -96,7 +96,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit" ">Masuk</button>
+                      <button class="btn w-100" style="background-color: orange" type="submit" >Masuk</button>
                     </div>
                     {{-- <div class="col-12">
                       <p class="small mb-0">Belum memiliki akaun? <a href="pages-register.html">Buat akun</a></p>
